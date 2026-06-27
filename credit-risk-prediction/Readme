@@ -1,29 +1,34 @@
-# Task 1: Customer Churn Prediction
+ Loan Approval Prediction
 
 ## Objective
 
-The objective of this project is to predict whether a bank customer is likely to leave (churn) the bank based on demographic and account-related information. Early identification of customers at risk of churning helps banks improve customer retention through targeted strategies.
+The objective of this project is to build a machine learning model that predicts whether a customer's loan application will be approved based on demographic, financial, and credit-related information. The model can help financial institutions make faster and more consistent loan approval decisions.
 
 ---
 
 ## Approach
 
-* Loaded the Customer Churn Modelling dataset using Pandas.
-* Explored the dataset by checking data types, missing values, and basic information.
-* Removed unnecessary columns (`RowNumber`, `CustomerId`, and `Surname`) that do not contribute to prediction.
-* Encoded the `Gender` feature using Label Encoding.
-* Applied One-Hot Encoding to the `Geography` feature.
-* Split the dataset into training and testing sets using an 80:20 ratio.
-* Trained a Random Forest Classifier with balanced class weights to handle class imbalance.
+* Loaded the loan approval dataset using Pandas.
+* Performed exploratory data analysis (EDA) by examining the dataset structure, dimensions, and missing values.
+* Visualized missing values using a heatmap.
+* Handled missing values using:
+
+  * **Mode** for categorical features (`gender`, `married`, `dependents`, `self_employed`, and `credit_history`).
+  * **Median** for numerical features (`loanamount` and `loan_amount_term`).
+* Visualized the distribution of loan amounts using a histogram with a density curve.
+* Created a scatter plot to analyze the relationship between applicant income and loan amount.
+* Removed the `loan_id` column as it does not contribute to prediction.
+* Encoded categorical variables using Label Encoding.
+* Split the dataset into training and testing sets (75% training and 25% testing).
+* Trained a Decision Tree Classifier using the Gini criterion with a maximum depth of 7.
 * Evaluated the model using Accuracy Score and Confusion Matrix.
-* Analyzed feature importance to identify the variables that have the greatest impact on customer churn.
 
 ---
 
 ## Results and Insights
 
-* Achieved an accuracy of approximately **87%** on the test dataset.
-* The model accurately classified most customers who remained with the bank.
-* The model was less effective at identifying customers who actually churned because the dataset is imbalanced.
-* Feature importance analysis showed that variables such as **Age**, **Balance**, **Credit Score**, **Estimated Salary**, and **Number of Products** had a significant influence on customer churn.
-
+* The Decision Tree model achieved a good level of prediction accuracy on the test dataset.
+* Proper handling of missing values improved the quality of the dataset before training.
+* Credit history, applicant income, loan amount, education level, and property area were important factors influencing loan approval decisions.
+* Data visualization helped identify the distribution of loan amounts and the relationship between applicant income and requested loan amount.
+* This project demonstrates how machine learning can support banks in automating and improving the loan approval process.
