@@ -1,0 +1,22 @@
+Personal Loan Acceptance Prediction
+Objective
+
+The objective of this project is to predict whether a customer is likely to accept a personal loan offer based on demographic, financial, and marketing campaign information. The project aims to help banks identify potential customers for targeted marketing campaigns and improve the effectiveness of loan offers.
+
+Approach
+Loaded the Bank Marketing dataset using Pandas.
+Performed Exploratory Data Analysis (EDA) by examining the dataset structure, summary statistics, and missing values.
+Visualized key customer characteristics, including:
+Age distribution
+Loan acceptance by job
+Loan acceptance by education level
+Encoded all categorical variables using Label Encoding.
+Split the dataset into training and testing sets using a 75:25 ratio.
+Trained a Logistic Regression model to classify whether a customer would accept a personal loan offer.
+Evaluated the model using Accuracy Score, Confusion Matrix, Precision, Recall, and F1-score.
+Results and Insights
+The Logistic Regression model achieved an accuracy of approximately 89%.
+The model was highly effective at identifying customers who were unlikely to accept the loan offer.
+Due to the imbalanced nature of the dataset, the model identified fewer customers who actually accepted the loan, resulting in lower recall for the positive class.
+Exploratory Data Analysis showed that customer occupation, education level, and age influence loan acceptance behavior.
+The project demonstrates how classification models can support banks in identifying potential customers and improving marketing campaign efficiency.
