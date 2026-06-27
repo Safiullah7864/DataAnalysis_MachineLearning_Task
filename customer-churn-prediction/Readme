@@ -1,0 +1,28 @@
+ Task 1: Customer Churn Prediction
+
+## Objective
+
+The objective of this project is to predict whether a bank customer is likely to leave (churn) the bank based on demographic and account-related information. Early identification of customers at risk of churning helps banks improve customer retention through targeted strategies.
+
+---
+
+## Approach
+
+* Loaded the Customer Churn Modelling dataset using Pandas.
+* Explored the dataset by checking data types, missing values, and basic information.
+* Removed unnecessary columns (`RowNumber`, `CustomerId`, and `Surname`) that do not contribute to prediction.
+* Encoded the `Gender` feature using Label Encoding.
+* Applied One-Hot Encoding to the `Geography` feature.
+* Split the dataset into training and testing sets using an 80:20 ratio.
+* Trained a Random Forest Classifier with balanced class weights to handle class imbalance.
+* Evaluated the model using Accuracy Score and Confusion Matrix.
+* Analyzed feature importance to identify the variables that have the greatest impact on customer churn.
+
+---
+
+## Results and Insights
+
+* Achieved an accuracy of approximately **87%** on the test dataset.
+* The model accurately classified most customers who remained with the bank.
+* The model was less effective at identifying customers who actually churned because the dataset is imbalanced.
+* Feature importance analysis showed that variables such as **Age**, **Balance**, **Credit Score**, **Estimated Salary**, and **Number of Products** had a significant influence on customer churn.
