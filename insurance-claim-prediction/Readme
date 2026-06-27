@@ -1,0 +1,32 @@
+Insurance Claim Prediction
+
+## Objective
+
+The objective of this project is to predict individual medical insurance charges based on personal and health-related information such as age, BMI, smoking status, number of children, and region. The model helps estimate future insurance costs and identify the factors that have the greatest impact on medical expenses.
+
+---
+
+## Approach
+
+* Loaded the Medical Cost Personal Dataset using Pandas.
+* Explored the dataset by checking data types and verifying that no missing values were present.
+* Performed exploratory data analysis (EDA) through visualizations:
+
+  * Bar chart showing the average insurance charges for smokers and non-smokers.
+  * Scatter plot showing the relationship between BMI and insurance charges.
+  * Scatter plot showing the relationship between age and insurance charges.
+* Applied One-Hot Encoding to categorical variables (`sex`, `smoker`, and `region`).
+* Split the dataset into training and testing sets using an 80:20 ratio.
+* Trained a Linear Regression model to predict insurance charges.
+* Evaluated the model using Mean Absolute Error (MAE), Root Mean Squared Error (RMSE), and the R² score.
+
+---
+
+## Results and Insights
+
+* The Linear Regression model successfully predicted medical insurance charges based on customer information.
+* Model performance was evaluated using MAE, RMSE, and R² score to measure prediction accuracy.
+* Smoking status had the strongest impact on insurance charges, with smokers having significantly higher average medical costs than non-smokers.
+* Insurance charges generally increased with age, indicating that older individuals tend to incur higher medical expenses.
+* Customers with higher BMI values also tended to have higher insurance charges, although the relationship was more variable than age.
+* This project demonstrates how regression models can be used to estimate healthcare costs and support data-driven decision-making in the insurance industry.
